@@ -32,6 +32,8 @@ group :test do
   gem "minitest-rails-capybara"
 end
 
+gem 'launchy'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

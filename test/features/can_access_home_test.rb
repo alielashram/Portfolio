@@ -1,9 +1,9 @@
 require "test_helper"
 
-class CanAccessHomeTest < Capybara::Rails::TestCase
-  test "sanity" do
+feature "Can Access Home Page" do
+  scenario "visit home index" do
     visit root_path
-    assert_content page, "Hello World"
-    refute_content page, "Goobye All!"
+    page.must_have_content "Hello World"
+    page.wont_have_content "Goobye All!"
   end
 end
