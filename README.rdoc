@@ -8,4 +8,4 @@ This is a portfolio site for my development work.
 
 == Information
 
-I am currently in my first week as a Code Fellow learning Ruby on Rails.
+I am currently a Code Fellow learning Ruby on Rails.
