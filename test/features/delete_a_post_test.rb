@@ -4,7 +4,7 @@ feature "Delete a Post" do
   scenario "Deletes an existing post" do
 
     # A post will be created
-    @post = Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
+    posts(:cf)
 
     # The post author goes the Post index page
     visit posts_path

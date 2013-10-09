@@ -4,8 +4,7 @@ feature "Editing a Post" do
   scenario "submit updates to an existing post" do
 
     # A post will be created
-    @post = Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
-
+    @post = posts(:cf)
     # The post author goes to that post's show page
     visit post_path(@post)
 

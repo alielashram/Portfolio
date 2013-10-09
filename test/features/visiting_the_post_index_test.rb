@@ -4,7 +4,7 @@ feature "Visiting the Post Index" do
   scenario "existing posts are listed" do
 
     #A post will be created
-    Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence.")
+    posts(:cf)
 
     #Someone will visit the post listing
     visit posts_path
