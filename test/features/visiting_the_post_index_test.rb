@@ -1,7 +1,6 @@
 require "test_helper"
 
 feature "Visiting the Post Index" do
-  focus
   scenario "existing posts are listed" do
 
     #A post will be created
