@@ -22,15 +22,14 @@ end
 
 gem 'jquery-rails'
 
-gem "minitest-focus"
-
-
 group :development, :test do
   gem "minitest-rails"
+  gem "minitest-rails-capybara"
+  gem "minitest-focus"
 end
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem "turn"
 end
 
 gem 'launchy'
