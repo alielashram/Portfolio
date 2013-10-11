@@ -7,10 +7,10 @@ feature "Check for Bootstrap" do
     visit root_path
 
     # Test to see if the find out more button from the theme appears
-    click_on "Find Out More"
+    click_on "PORTFOLIO"
 
     # Our services section of root page is displayed
-    page.text.must_include 'Our Services'
+    page.text.must_include 'Our Work'
 
   end
 end

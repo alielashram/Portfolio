@@ -115,7 +115,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(http://watoxics.org/publications/puget-sound-down-the-drain-1/image) no-repeat center center fixed;
+  background: url(http://www.fabiovisentin.com/photography/photo/25/sky-wallpaper-06018.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -196,6 +196,14 @@ i.service-icon:hover {
 .call-to-action .btn {
   margin: 10px;
 }
+
+.socialIcons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px 0 0; }
+
+.socialIcons a:hover {
+  color: #b9b7aa; }
 
 /* Footer */
 
