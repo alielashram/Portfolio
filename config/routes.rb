@@ -7,7 +7,7 @@ Portfolio::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'posts#index'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -28,6 +28,14 @@ a:hover {
   text-decoration: none;
 }
 
+.word-links {
+  color: #333;
+}
+
+.word-links:hover {
+  color: #B9F1EA;
+}
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
