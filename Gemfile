@@ -1,17 +1,36 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+gem 'jquery-rails'
+
+gem "minitest-rails"
+
+ group :development, :test do
+  gem 'sqlite3'
+  gem "minitest-rails-capybara"
+  gem "minitest-focus"
+  gem "minitest-colorize"
+  gem "capybara-webkit"
+  gem "launchy"
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -22,19 +41,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
-group :development, :test do
-  gem "minitest-rails"
-  gem "minitest-rails-capybara"
-  gem "minitest-focus"
-end
-
 group :test do
   gem "turn"
 end
 
-gem 'launchy'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
