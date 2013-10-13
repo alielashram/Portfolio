@@ -7,7 +7,7 @@ feature "Check for Bootstrap" do
     visit root_path
 
     # Test to see if the find out more button from the theme appears
-    click_on "Resume"
+    click_on "Competencies"
 
     # Our services section of root page is displayed
     page.text.must_include 'Competencies'

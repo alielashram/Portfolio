@@ -1,20 +1,20 @@
-require "test_helper"
+#require "test_helper"
 
-feature "creating a post" do
-  scenario "works with valid data" do
+#feature "creating a post" do
+ # scenario "works with valid data" do
 
     # Given a completed post form
-    visit posts_path
-    click_on 'New Post'
-    fill_in 'Title', with: posts(:cf).title
-    fill_in 'Content', with: posts(:cf).content
+  #  visit posts_path
+   # click_on 'New Post'
+    #fill_in 'Title', with: posts(:cf).title
+    #fill_in 'Content', with: posts(:cf).content
 
     # When I submit the form
-    click_on 'Create Post'
+    #click_on 'Create Post'
 
     # A new post should be created and displayed
-    page.text.must_include 'Post was successfully created'
-    page.text.must_include posts(:cf).title
+    #page.text.must_include 'Post was successfully created'
+    #page.text.must_include posts(:cf).title
 
-  end
-end
+  #end
+#end
