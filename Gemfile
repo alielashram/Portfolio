@@ -22,7 +22,7 @@ gem 'jquery-rails'
 
 gem "minitest-rails"
 
- group :development, :test do
+group :development, :test do
   gem 'sqlite3'
   gem "minitest-rails-capybara"
   gem "minitest-focus"
