@@ -36,4 +36,11 @@ class ProjectsController < ApplicationController
         render action: "edit"
       end
   end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to action: "index"
+
+  end
 end
