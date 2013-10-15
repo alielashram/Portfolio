@@ -29,6 +29,7 @@ group :development, :test do
   gem "minitest-colorize"
   gem "capybara-webkit"
   gem "launchy"
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :assets do
