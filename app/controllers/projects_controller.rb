@@ -13,12 +13,27 @@ class ProjectsController < ApplicationController
         flash[:notice] = "Project has been created."
         redirect_to @project
       else
-        flash[:alert] = "Project could not be saved"
+        flash[:alert] = "Project could not be saved."
         render action: "new"
       end
     end
 
   def show
     @project = Project.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+      if @project.update_attributes(params[:project])
+        flash[:notice] = "Project was successfully updated."
+        redirect_to @project
+      else
+        flash[:alert] = "Project could not be saved."
+        render action: "edit"
+      end
   end
 end
