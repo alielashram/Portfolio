@@ -1,7 +1,7 @@
 require "test_helper"
 
 feature "Delete a Post" do
-  scenario "Deletes an existing post" do
+  scenario "Deletes an existing post when its destroy button is clicked" do
 
     # A post will be created
     projects(:ae)
