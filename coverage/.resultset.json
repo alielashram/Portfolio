@@ -1,6 +1,19 @@
 {
   "Unit Tests": {
     "coverage": {
+      "/Users/aliel-ashram/Portfolio/app/models/user.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/aliel-ashram/Portfolio/app/controllers/application_controller.rb": [
         1,
         1,
@@ -11,8 +24,8 @@
         null,
         null,
         1,
-        6,
-        4,
+        9,
+        7,
         0,
         0,
         2,
@@ -129,7 +142,7 @@
       "/Users/aliel-ashram/Portfolio/app/controllers/projects_controller.rb": [
         1,
         1,
-        4,
+        6,
         null,
         null,
         1,
@@ -189,6 +202,6 @@
         null
       ]
     },
-    "timestamp": 1381868960
+    "timestamp": 1381880492
   }
 }
