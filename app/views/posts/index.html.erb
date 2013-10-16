@@ -1,3 +1,20 @@
+<body>
+<a id="menu-toggle" href="#" class="btn btn-default btn-lg toggle"><i class="icon-reorder"></i></a>
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-primary btn-lg pull-right toggle"><i class="icon-remove"></i></a>
+        <li class="sidebar-brand">Ali El-Ashram Rails Blog</li>
+        <li><a href="http://aliel.herokuapp.com" target="_blank">Portfolio</a></li>
+      </ul>
+    </div>
+
+    <% if current_user.present? %>
+      <%= link_to 'Sign Out', sign_out_path %>
+    <% else %>
+      <%= link_to 'Register', new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
+    <% end %>
+
 <h1>Blog</h1>
 
 <table>
@@ -21,5 +38,6 @@
 </table>
 
 <br />
+
 
 <%= link_to 'New Post', new_post_path %>
