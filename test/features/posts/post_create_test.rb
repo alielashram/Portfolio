@@ -21,11 +21,6 @@ feature "creating a post" do
     page.text.must_include 'Post was successfully created'
     page.text.must_include posts(:cf).title
 
-    # When I submit the form
-
-
-
-
     # New post should be attributed to a user
     page.has_css? "#author"
     page.text.must_include users(:df).email
