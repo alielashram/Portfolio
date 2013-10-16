@@ -16,6 +16,7 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 
 gem 'devise'
 
+gem "faker"
 
 # Gems used only for assets and not required
 # in production environments by default.

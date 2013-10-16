@@ -3,6 +3,8 @@ require "test_helper"
 feature "Visiting the Post Index" do
   scenario "existing posts are listed" do
 
+    sign_up
+
     #A post will be created
     posts(:cf)
 

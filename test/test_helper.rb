@@ -17,10 +17,22 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def sign_up
+    visit posts_path
+    click_on "Register"
+
+    # When I register with valid info
+    fill_in "Email", with: users(:df).email
+    fill_in "Password", with: users(:df).encrypted_password
+    fill_in "Password confirmation", with: users(:df).encrypted_password
+    click_on "Sign up"
+  end
+
   def sign_in
-    visit new_user_session_path
-    fill_in "Email", with: users(:cf).email
-    fill_in "Password", with: "password"
+    visit posts_path
+    click_on "Sign In"
+    fill_in "Email", with: users(:df).email
+    fill_in "Password", with: users(:df).encrypted_password
     click_on "Sign in"
   end
 end

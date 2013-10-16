@@ -3,7 +3,7 @@ require "test_helper"
 feature("As a site visitor I want to be able to sign up for an account so that I can perform actions that require me to be logged in.") do
   scenario "sign up" do
     # Given a registration form
-    visit projects_path
+    visit posts_path
     click_on "Register"
 
     # When I register with valid info

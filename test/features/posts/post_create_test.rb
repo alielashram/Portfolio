@@ -3,11 +3,8 @@ require "test_helper"
 feature "creating a post" do
   scenario "works with valid data" do
 
-    # Given an authorized user complets a new post form
-    visit new_user_session_path
-    fill_in "Email", with: users(:df).email
-    fill_in "Password", with: users(:df).encrypted_password
-    click_on "Sign in"
+    # Given an authorized user completes a new post form
+    sign_up
 
     visit posts_path
 

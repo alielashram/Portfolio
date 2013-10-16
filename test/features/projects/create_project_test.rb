@@ -8,7 +8,7 @@ feature "As the site owner, I want to add a portfolio item so that I can show of
     fill_in "Technologies used", with: projects(:ae).technologies_used
     click_on "Create Project"
     page.text.must_include "Project has been created."
-    page.text.must_include "Rails"
+    page.text.must_include "WooHoooo"
   end
 
   scenario "new project has invalid data" do

@@ -3,7 +3,7 @@ require "test_helper"
 feature("As a site visitor I want to be able to sign out.") do
   scenario "sign out" do
     # Given a registration form
-    visit projects_path
+    visit posts_path
     click_on "Register"
 
     # When I register with valid info
@@ -16,6 +16,7 @@ feature("As a site visitor I want to be able to sign out.") do
     page.text.must_include "Welcome! You have signed up successfully."
 
     # Sign out
+    visit posts_path
     click_on "Sign Out"
     page.text.must_include "Signed out successfully."
   end

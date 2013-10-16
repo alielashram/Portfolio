@@ -3,6 +3,8 @@ require "test_helper"
 feature "Delete a Post" do
   scenario "Deletes an existing post" do
 
+    sign_up
+
     # A post will be created
     posts(:cf)
 
