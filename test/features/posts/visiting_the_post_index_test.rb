@@ -1,19 +1,43 @@
 require "test_helper"
 
 feature "Visiting the Post Index" do
-  scenario "existing posts are listed" do
+  scenario "with existing posts, non logged in user" do
+    # Given existing posts (in fixtures)
 
-    sign_up
-
-    #A post will be created
-    posts(:cf)
-
-    #Someone will visit the post listing
+    # When I visit /posts
     visit posts_path
 
-    #The post that was created should be there
-    page.text.must_include "Becoming a Code Fellow"
-    page.text.must_include "Means striving for excellence."
+    # Then the existing posts should be loaded
+    page.text.must_include posts(:cf).title
+    page.text.wont_include posts(:unpublished).title
 
+    # And I should not see the edit link
+  end
+
+
+  scenario "with existing posts, editor" do
+    # Given existing posts (in fixtures)
+    # And an editor user
+    sign_in(:editor)
+
+    # When I visit /posts
+    visit posts_path
+
+    # Then both published and ubpublished posts should be there
+    page.text.must_include posts(:cf).title
+    page.text.must_include posts(:unpublished).title
+  end
+
+  scenario "with existing posts, author" do
+    # Given existing posts (in fixtures)
+    # And an editor user
+    sign_in(:author)
+
+    # When I visit /posts
+    visit posts_path
+
+    # Then both published and ubpublished posts should be there
+    page.text.must_include posts(:cf).title
+    page.text.must_include posts(:unpublished).title
   end
 end

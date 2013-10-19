@@ -1,9 +1,9 @@
 class ApplicationPolicy
-  attr_reader :user, :post
+  attr_reader :user, :record
 
   def initialize(user, record)
     @user = user
-    @post = post
+    @record = record
   end
 
   def index?
@@ -15,7 +15,7 @@ class ApplicationPolicy
   end
 
   def create?
-    user.admin? or not post.published?
+    false
   end
 
   def new?
@@ -38,4 +38,3 @@ class ApplicationPolicy
     Pundit.policy_scope!(user, record.class)
   end
 end
-

@@ -2,3 +2,9 @@ cf:
   title: Becoming a Code Fellow
   content: Means striving for excellence.
   author: One
+
+unpublished:
+  title: Unpublished post
+  content: Unpublished content
+  author: author
+  published: false

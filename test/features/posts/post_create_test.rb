@@ -21,6 +21,15 @@ feature "creating a post" do
     # New post should be attributed to a user
     page.has_css? "#author"
     page.text.must_include users(:df).email
+  end
 
+  scenario "only editors can publish" do
+    # Given an author's post
+    # When I visit the edit page
+    # There is no checkbox for published
+  end
+
+  scenario "unauthenticated site vistiors cannot create posts" do
+    #
   end
 end

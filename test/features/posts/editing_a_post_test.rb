@@ -12,7 +12,6 @@ feature "Editing a Post" do
 
     # The post author goes to a post's show page
     visit edit_post_path(posts(:cf))
-    save_and_open_page
 
     # That page should have a link to "Edit" that the author can click
     #click_on 'Edit'
@@ -28,6 +27,23 @@ feature "Editing a Post" do
     # The newly updated post should be shown to the author with a confirmation message
     page.text.must_include "Post was successfully updated."
     page.text.must_include "Take control"
+  end
 
+  scenario "Only editors can publish" do
+    # Given a new post
+    # When I update the published checkbox to checked and save
+    # Then the post will be published
+
+  end
+
+  scenario "Authors cannot publish" do
+    # Given an author's post
+    # When I visit the edit page
+    # There is no checkbox for published
+
+  end
+
+  scenario "unauthenticated site vistiors cannot delete posts" do
+    #
   end
 end
