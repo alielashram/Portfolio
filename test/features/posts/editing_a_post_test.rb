@@ -12,6 +12,7 @@ feature "Editing a Post" do
 
     # The post author goes to a post's show page
     visit edit_post_path(posts(:cf))
+    save_and_open_page
 
     # That page should have a link to "Edit" that the author can click
     #click_on 'Edit'

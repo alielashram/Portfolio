@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-
+    authorize @post
     respond_to do |format|
       if @post.save
         current_user.posts << @post
@@ -70,6 +70,13 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def publish
+    @post = Post.find(params[:id])
+    authorize @post, :update?
+    @post.publish!
+    redirect_to @post
   end
 
   # DELETE /posts/1
