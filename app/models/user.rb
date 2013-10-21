@@ -6,8 +6,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :role, :published, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
   has_many :posts, foreign_key: "author_id"
+
+  def author?
+    role == 'author'
+  end
+
+  def editor?
+    role == 'editor'
+  end
 end
