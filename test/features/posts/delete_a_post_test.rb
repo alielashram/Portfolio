@@ -15,27 +15,12 @@ def set_up_a_post_by_author
   post_id = current_url.split('/').last
 end
 
-feature "Deleting a Post" do
-  scenario "author can delete a post" do
-    # Given an existing post, and an authenticated user
-    sign_in
-    visit posts_path
-
-    # When the delete link is clicked
-    # page.find("tr#post_#{posts(:cr).id}").click_on "Destroy"
-    # or
-    click_link("Destroy", href: "/posts/#{posts(:cf).id}")
-
-    # Then the post is deleted
-    page.wont_have_content "Becoming a Code Fellow"
-  end
-
   scenario "an author can delete her own unpublished posts" do
     post_id = set_up_a_post_by_author
     click_on "Back"
     click_link "Destroy", href: "/posts/#{post_id}"
     # Then I should see a message about the post being deleted
-    page.must_have_content "Post was deleted"
+    page.text.must_include "Post was deleted"
     # And the post title should not be in the index
     page.wont_have_content "author's title destroy test"
   end
@@ -52,7 +37,7 @@ feature "Deleting a Post" do
     visit posts_path
     click_link("Destroy", href: "/posts/#{post_id}")
     # Then I should see a message about the post being deleted
-    page.must_have_content "Post was deleted"
+    page.text.must_include "Post was deleted"
     # And the post title should not be in the index
     page.wont_have_content "author's title destroy test"
   end
