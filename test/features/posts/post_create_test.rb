@@ -4,7 +4,7 @@ feature "creating a post" do
   scenario "works with valid data" do
 
     # Given an authorized user completes a new post form
-    sign_up
+    sign_in(:editor)
 
     visit posts_path
 
