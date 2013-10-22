@@ -18,6 +18,10 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 
 gem 'devise'
 
+gem 'omniauth-twitter'
+
+gem 'figaro'
+
 gem "faker"
 
 # Gems used only for assets and not required
