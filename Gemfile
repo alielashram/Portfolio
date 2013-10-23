@@ -12,6 +12,8 @@ group :production do
   gem 'pg'
 end
 
+gem "strong_parameters"
+
 gem "pundit"
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
