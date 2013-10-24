@@ -14,8 +14,10 @@
   <b>Content:</b>
   <%= @post.content %>
 </p>
-
-<%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<hr>
+<% if policy(@post).update? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+</article>
+<%= render "comments/form" %>
+<p class="back_link"><%= link_to 'Back to the blog', posts_path %></p>
