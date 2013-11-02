@@ -11,10 +11,10 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def page_not_found
-    flash[:error] = "Sorry, we couldn't find that page. Here's the home page:"
-    redirect_to "/404.html"
-  end
+  # def page_not_found
+  #   flash[:error] = "Sorry, we couldn't find that page. Here's the home page:"
+  #   redirect_to "/404.html"
+  # end
 
   def user_not_authorized
     flash[:error] = "You are not authorized to perform this action"
