@@ -9,6 +9,10 @@ require "minitest/rails"
 # to the test group in the Gemfile and uncomment the following:
 require "minitest/rails/capybara"
 
+## Capybara webkit stuff
+require "capybara/webkit"
+Capybara.javascript_driver = :webkit
+
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
