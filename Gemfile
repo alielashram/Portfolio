@@ -41,6 +41,7 @@ group :development, :test do
   gem "capybara-webkit"
   gem "launchy"
   gem 'simplecov', :require => false, :group => :test
+  gem 'brakeman'
 end
 
 group :assets do
